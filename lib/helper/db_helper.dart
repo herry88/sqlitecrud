@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:path/path.dart';
-//import 'package:sqlitecrud/model/model_pegawai.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:sqlitecrud/model/model_pegawai.dart';
 
@@ -10,8 +9,8 @@ class DatabaseHelper {
   factory DatabaseHelper() => _instance;
   final String tablePegawai = 'noteTable';
   final String columnId = 'id';
-  final String columnFirstName = 'firstname';
-  final String columnSecondName = 'secondname';
+  final String columnFirstName = 'firstName';
+  final String columnSecondName = 'secondName';
   final String columnMobileNo = 'mobileNo';
   final String columnEmailId = 'emailId';
 
