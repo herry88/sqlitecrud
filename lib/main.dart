@@ -5,5 +5,6 @@ void main()=> runApp(
   MaterialApp(
     title: 'Data Pegawai',
     home: ListPegawai(),
+    debugShowCheckedModeBanner: false,
   )
 );

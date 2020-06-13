@@ -51,10 +51,12 @@ class _ListPegawaiState extends State<ListPegawai> {
                         style: new TextStyle(
                             fontSize: 22.0, color: Colors.deepOrangeAccent),
                       ),
-                      subtitle: new Text(
-                        '${items[position].firstName}',
-                        style: new TextStyle(
-                            fontSize: 18.0, fontStyle: FontStyle.italic),
+                      subtitle: SingleChildScrollView(
+                        child: new Text(
+                          '${items[position].firstName}',
+                          style: new TextStyle(
+                              fontSize: 18.0, fontStyle: FontStyle.italic),
+                        ),
                       ),
                       leading: Column(
                         children: <Widget>[
@@ -70,7 +72,9 @@ class _ListPegawaiState extends State<ListPegawai> {
                                   fontSize: 22.0, color: Colors.white),
                             ),
                           ),
-
+                          new IconButton(icon: const Icon(Icons.remove_circle_outline),
+                            onPressed: () =>_deletePegawai(context, items[position], position),
+                          )
                         ],
                       ),
                       onTap: () => _navigateToPegawai(context, items[position]),
@@ -106,7 +110,7 @@ class _ListPegawaiState extends State<ListPegawai> {
     }
   }
 
-  //untuk delete
+//  //untuk delete
   void _deletePegawai(
       BuildContext context, ModelPegawai pegawai, int position) async {
     db.deletePegawai(pegawai.id).then((pegawais) {

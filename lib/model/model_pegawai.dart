@@ -1,7 +1,10 @@
 class ModelPegawai{
   //Declaration Variable
   int _id;
-  String _firstName, _secondName, _mobileNo, _emailId;
+  String _firstName;
+  String _secondName;
+  String _mobileNo;
+  String _emailId;
 
   ModelPegawai(this._firstName, this._secondName, this._mobileNo, this._emailId);
 
